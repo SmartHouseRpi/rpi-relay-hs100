@@ -1,0 +1,13 @@
+{
+  "name": "Relay",
+  "version": "1.0.0",
+  "description": "220V relay on Docker",
+  "author": "Dmitry A. Grechka <dmitry@grechka.family",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
