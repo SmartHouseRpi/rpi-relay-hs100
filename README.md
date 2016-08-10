@@ -6,7 +6,7 @@ Docker image for RaspberryPI (ARMv7) containing REST Web service capable of swit
 
 (NOT WORKING YET! DON'T TRY IT NOW)
 
-![image of the relay](http://github.io/SmartHouseRpi/rpi-relay/relay.jpg)
+![image of the relay](http://SmartHouseRpi.github.io/rpi-relay/relay.jpg)
 
 Getting HTTP "PUT /" opens the relay (switches on main)
 
