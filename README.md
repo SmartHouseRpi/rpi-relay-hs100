@@ -6,7 +6,7 @@ Docker image for RaspberryPI (ARMv7) containing REST Web service capable of swit
 
 ![image of the relay](http://SmartHouseRpi.github.io/rpi-relay/relay.jpg)
 
-###Hot to use
+###How to use
 
 docker run -p **80**:80 --device=**/dev/ttyUSB0**:/dev/ttyUSB0 -d smarthouserpi/rpi-relay:latest
 
