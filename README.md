@@ -11,6 +11,7 @@ Docker image for RaspberryPI (ARMv7) containing REST Web service capable of swit
 docker run -p **80**:80 --device=**/dev/ttyUSB0**:/dev/ttyUSB0 -d smarthouserpi/rpi-relay:latest
 
 The image operates with /dev/ttyUSB0, thus map corresponding relay device to the /dev/ttyUSB0
+
 Modify listening port if nessesary
 
 ###How it works
