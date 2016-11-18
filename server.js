@@ -10,10 +10,11 @@ const PORT = 80;
 // App
 const app = express();
 
+var relay_host = process.env.RELAY_HOST;
 
 app.put('/', function (req, res) {
   console.log("Open relay request");
-  exec('/bin/echo -e "\\x55\\x01\\x01\\x02\\x00\\x00\\x00\\x59" > /dev/ttyUSB0',function(error,stdout, stderr) {
+  exec('/hs100.sh '+relay_host+' 9999 on',function(error,stdout, stderr) {
 	if (error !== null) {
 		var message = `relay switch error: ${error}; stderr: ${stderr}; stdout: ${stdout}`
 		console.warn(message);
@@ -27,7 +28,7 @@ app.put('/', function (req, res) {
 
 app.delete('/', function (req, res) {
   console.log("Close relay request");
-  exec('/bin/echo -e "\\x55\\x01\\x01\\x01\\x00\\x00\\x00\\x58" > /dev/ttyUSB0',function(error,stdout, stderr) {
+  exec('/hs100.sh '+relay_host+' 9999 off',function(error,stdout, stderr) {
 	if (error !== null) {
 		var message = `relay switch error: ${error}; stderr: ${stderr}; stdout: ${stdout}`
 		console.warn(message);
